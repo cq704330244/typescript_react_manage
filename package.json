@@ -11,6 +11,7 @@
     "@testing-library/user-event": "^12.1.10",
     "@typescript-eslint/eslint-plugin": "^4.5.0",
     "@typescript-eslint/parser": "^4.5.0",
+    "antd": "^4.15.0",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.6.0",
     "babel-loader": "8.1.0",
@@ -94,6 +95,8 @@
   "devDependencies": {
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.3",
+    "babel-plugin-import": "^1.13.3",
+    "dayjs": "^1.10.4",
     "less": "^4.1.1",
     "less-loader": "5.0.0",
     "ts-loader": "^8.1.0",
@@ -155,6 +158,16 @@
   "babel": {
     "presets": [
       "react-app"
+    ],
+    "plugins": [
+      [
+        "import",
+        {
+          "libraryName": "antd",
+          "libraryDirectory": "lib",
+          "style": true
+        }
+      ]
     ]
   }
 }
