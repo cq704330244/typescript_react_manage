@@ -18,7 +18,8 @@ export default withRouter(props => {
     message.loading({
       content: "biu! 登陆成功!正在前往首页途中...",
       onClose: () => {
-        history.push("/home")
+        sessionStorage.setItem("free", String(true))
+        history.push("/home/console")
       },
     })
   }
