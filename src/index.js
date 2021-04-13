@@ -1,17 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import "babel-polyfill"
+import dva from "dva"
+import createLoading from "dva-loading"
+const createHistory = require("history").createBrowserHistory
+const history = createHistory()
+// 1. Initialize
+const app = dva({
+  ...createLoading(),
+  //  history: browserHistory,
+  history,
+  onError(error) {
+    console.error("app onError -- ", error)
+  },
+})
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+// 2. Model
+app.model(require("./models/app").default)
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// 3. Router
+app.router(require("./routes").default)
+
+// 4. Plugins
+// app.use({});
+
+// 5. Start
+app.start("#root")

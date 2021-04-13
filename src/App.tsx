@@ -1,11 +1,9 @@
-import React from 'react';
-import { Button } from 'antd'
-import './style/index.less';
+import React from "react"
 
-function App() {
-  return <div className='App'>
-    <Button>22222</Button>
-  </div>;
+function App(props: any) {
+  const { history } = props
+  history.push("/login")
+  return <div />
 }
 
-export default App;
+export default App
