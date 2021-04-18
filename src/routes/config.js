@@ -20,7 +20,7 @@ const routerConfig = [
         component: () => import("../view/Console"),
       },
       {
-        path: "/home/markdown",
+        path: "/home/write/markdown",
         models: () => [],
         component: () => import("../view/WriteEditor/Markdown"),
       },

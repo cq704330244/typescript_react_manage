@@ -19,12 +19,7 @@ const menulist = [
     key: "/home/display",
     subs: [
       { key: "/home/display/base", title: "轮播图", icon: "" },
-      {
-        key: "/home/display/icon",
-        title: "图标",
-        icon: "",
-        subs: [{ key: "/home/display/icon/demo", title: "文字图标", icon: "" }],
-      },
+      { key: "/home/display/icon", title: "图标", icon: "" },
     ],
   },
   {
@@ -32,8 +27,8 @@ const menulist = [
     icon: "write",
     key: "/home/write",
     subs: [
-      { key: "/home/markdown", title: "markdown", icon: "" },
-      { key: "/home/word", title: "word", icon: "" },
+      { key: "/home/write/markdown", title: "markdown", icon: "" },
+      { key: "/home/write/word", title: "word", icon: "" },
     ],
   },
   {
