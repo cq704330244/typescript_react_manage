@@ -19,7 +19,17 @@ const routerConfig = [
         models: () => [],
         component: () => import("../view/Console"),
       },
+      {
+        path: "/home/markdown",
+        models: () => [],
+        component: () => import("../view/WriteEditor/Markdown"),
+      },
     ],
+  },
+  {
+    path: "/not-found",
+    models: () => [],
+    component: () => import("../view/NotFound"),
   },
 ]
 

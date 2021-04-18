@@ -1,5 +1,5 @@
 import React from "react"
-import { Router, Route, Switch } from "dva/router"
+import { Router, Route, Switch, Redirect } from "dva/router"
 import config from "./config"
 import dynamic from "dva/dynamic"
 function mapRoute(routeArr, app) {
@@ -29,7 +29,10 @@ function mapRoute(routeArr, app) {
 function Routers({ history, app }) {
   return (
     <Router history={history}>
-      <Switch>{mapRoute(config, app)}</Switch>
+      <Switch>
+        {mapRoute(config, app)}
+        <Redirect from="/*" to="/not-found" />
+      </Switch>
     </Router>
   )
 }

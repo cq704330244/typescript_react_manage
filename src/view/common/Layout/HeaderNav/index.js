@@ -28,14 +28,9 @@ export default class HeaderNav extends Component {
   componentDidMount() {
     const free = sessionStorage.getItem("free")
     if (free) {
-      this.setState(
-        {
-          userInfo: user,
-        },
-        () => {
-          console.log(this.state.userInfo)
-        }
-      )
+      this.setState({
+        userInfo: user,
+      })
     }
   }
   render() {

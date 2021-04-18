@@ -2,7 +2,7 @@ const menulist = [
   {
     title: "首页",
     icon: "home",
-    key: "/home",
+    key: "/home/console",
   },
   {
     title: "基本组件",
@@ -25,6 +25,15 @@ const menulist = [
         icon: "",
         subs: [{ key: "/home/display/icon/demo", title: "文字图标", icon: "" }],
       },
+    ],
+  },
+  {
+    title: "编辑工具",
+    icon: "write",
+    key: "/home/write",
+    subs: [
+      { key: "/home/markdown", title: "markdown", icon: "" },
+      { key: "/home/word", title: "word", icon: "" },
     ],
   },
   {

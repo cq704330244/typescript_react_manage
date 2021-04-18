@@ -1,5 +1,5 @@
 import React from "react"
-import { Layout, message } from "antd"
+import { Layout } from "antd"
 import SideNav from "./SideNav"
 import HeaderNav from "./HeaderNav"
 import themsContentx from "../../Home/context"
@@ -18,12 +18,6 @@ class LayoutNav extends React.Component<ILayout> {
     this.setState({
       collapsed: value,
     })
-  }
-  componentDidMount() {
-    const free = sessionStorage.getItem("free")
-    if (free) {
-      message.success("biu! 欢迎小主的到来！")
-    }
   }
   render() {
     return (

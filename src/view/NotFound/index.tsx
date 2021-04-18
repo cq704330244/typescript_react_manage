@@ -3,7 +3,7 @@ import { Button, Row, Col } from "antd"
 import { Link } from "react-router-dom"
 import "./style.less"
 
-const errGif = require("../../assets/401.gif").default
+const errGif = require("../../assert/401.gif").default
 
 const NotFound: React.FC<{ [key: string]: any }> = props => {
   const { history } = props
